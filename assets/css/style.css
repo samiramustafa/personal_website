@@ -1,0 +1,344 @@
+@import url(font.css);
+/* --------------------styling the page--------------------------------------- */ 
+body {
+    margin: 0;
+    background-color: #f4f4f9; 
+    
+}
+img:hover {
+  transform: scale(1.1);
+  opacity: 1; 
+}
+/* To hide all pages and style  the container */
+.section {
+    display: none;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;  
+}
+/* To control which page will appear */
+#home:checked ~ #section-home,
+#hobbies:checked ~ #section-hobbies,
+#skills:checked ~ #section-skills,
+#cv:checked ~ #section-cv,
+#birth_day:checked ~ #section-birth_day,
+#contact_me:checked ~ #section-contact_me,
+#my_wishes:checked ~ #section-my_wishes,
+#thanks:checked ~ #section-thanks{
+  display: block;
+}
+/* --------------------------------------nav bar -----------------------------------------------*/ 
+.nav {
+    background-color: #333; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px 0;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav ul li {
+    color: #fff; 
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative; 
+    font-size: 16px;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in-out; تأثير سلس */
+}
+.nav ul li:hover {
+    font-size: 18px;
+    color:#007bff; 
+}
+.nav ul li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color:#007bff; 
+}
+.nav ul li:hover::after {
+    width: 100%; 
+}
+ /* -----------------------------home------------------------------------------- */
+#section-home{
+  background-image: url(../images/background.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.personal_img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  border: 5px solid #007bff; 
+  margin-bottom: 20px;
+  object-fit: cover; 
+}
+ /* -----------------------------hobbies ------------------------------------------- */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px;
+}
+.card {
+  background-color: #ffffff;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  padding: 20px;
+  max-width: 200px;
+  grid-template-columns: auto;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 15px;
+  border: 3px solid #007bff;
+}
+ /* -----------------------------birth day------------------------------------------- */
+.kind_msg,
+.thanks{
+    visibility: hidden;
+}
+.birthday{
+/* hedin after 5s*/
+  animation: showHide 5s linear forwards; 
+}
+.birthday-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+#kind_msg{
+  /*apper after 5 s*/
+  animation: showSecond   1s 5s linear forwards; 
+}
+textarea {
+  width: 80%;
+  height: 100px;
+  font-size: 16px;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  justify-content: center;
+  cursor: pointer; 
+}
+button:hover {
+  background-color:  #3a89df;;
+}
+@keyframes showHide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+}
+100% {
+    opacity: 0;
+    visibility: hidden;
+}
+}
+@keyframes showSecond {
+  0% {
+      opacity: 0;
+      visibility: hidden;
+  }
+  100% {
+      opacity: 1;
+      visibility: visible;
+  }
+}
+ /* -----------------------------contact me------------------------------------------- */
+.form-container{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 200px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form textarea {
+  width: 100%;
+}
+.social-media {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-media a{
+  color: #007bff;
+  font-size: 20px;
+  margin: 0 10px;
+}
+.social-media a:hover{
+  color: #b1cce9;
+  font-size: 30px;
+}
+.social-media a:visited{
+  color: #3a89df;
+}
+ /* ----------------------------thanks page------------------------------------------- */
+.thanks_imag{
+  height: 300px;
+}
+ /* ----------------------------cv page------------------------------------------- */
+.education,
+.experience{
+  text-align: left;
+  margin-left: 50px;
+
+}
+.certificat,
+.job{
+  margin-left: 50px;
+}
+.certificat p,
+.job p{
+  margin-left: 50px;
+}
+ /* -----------------------------my wishes page------------------------------------------- */
+/* .slider-container {
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  
+  
+}
+.slide {
+  position: relative;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.country-name {
+  position: absolute;
+  top: 0px;
+  /* left: 50%; */
+  /* transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+}
+@keyframes sliderAnimation {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-100%);
+  }
+  50% {
+      transform: translateX(-200%);
+  }
+  75% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+
+      }
+.slider {
+  animation: sliderAnimation 12s infinite;
+} */
+
+
+
+
+
+.slider-container {
+ width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.slider {
+  display: flex;
+  
+  
+}
+.slide {
+  position: relative;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  /* object-fit: cover; */
+  border-radius: 10px;
+}
+.country-name {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 90%;
+}
+@keyframes sliderAnimation {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(-100%);
+  }
+  50% {
+      transform: translateX(-200%);
+  }
+  75% {
+      transform: translateX(-300%);
+  }
+  100% {
+      transform: translateX(-400%);
+  }
+}
+.slider {
+  animation: sliderAnimation 12s infinite;
+}

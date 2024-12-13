@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal website</title>
+
+    <!-- -------------------------------------links------------------------- -->
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- fav icon -->
+    <link rel="icon" href="assets/images/favicon.png"> 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- --------------------------------nav bar----------------------------------------------- -->
+<nav class="nav">
+    <ul>
+        <li> <label for="home">Home</label></li>
+        <li><label for="hobbies">Hobbies</label></li>
+        <li><label for="skills">Skills</label></li>
+        <li><label for="cv">CV</label></li>
+        <li><label for="birth_day">Birth Day</label></li>
+        <li><label for="contact_me">Contact Me</label></li>
+        <li><label for="my_wishes">My wishes</label></li>
+    </ul>
+   </nav>
+        <input type="radio" name="section" id="home" checked hidden>
+        <input type="radio" name="section" id="hobbies" hidden >                      
+        <input type="radio" name="section" id="skills" hidden >                      
+        <input type="radio" name="section" id="cv" hidden >                      
+        <input type="radio" name="section" id="birth_day" hidden >                      
+        <input type="radio" name="section" id="contact_me" hidden >                      
+        <input type="radio" name="section" id="my_wishes" hidden >  
+        <input type="radio" name="section" id="thanks" hidden >  
+        <!-- ---------------------------------------------home page-------------------------------------- -->
+        <section class="section" id="section-home">
+            <div >
+            <img class="personal_img" src="assets/images/صورة شخصية.jpg" alt="personal_img">
+            <h1>Samira mustafa</h1>
+            <h4>Full stack Developer</h4>
+            <p>Welcome to the official website of Eng. Samira Mostafa! Here, you’ll discover innovative projects, inspiring stories, and a vision for a brighter future in web development. Explore, connect, and let’s create impactful work together!</p>
+            </div>
+        </section>
+        <!-- ---------------------------------------------hobbies page-------------------------------------- -->
+        <section class="section" id="section-hobbies">
+            <h1>My Hobbies</h1>
+            <div class="container">
+                <div  class="card">
+                    <img clas="" src="assets/images/reading.jpg" alt="">
+                    <p>Reading</p>
+                </div>
+                <div class="card"> 
+                    <img class="" src="assets/images/images.jpg" alt="">
+                    <p>Swimming</p>
+                </div>
+                <div class="card">
+                    <img class="" src="assets/images/young-woman-drawing-canvas_23-2148854537.avif" alt="">
+                    <p>Drawing</p>
+                </div>
+            </div>
+        </section>
+                <!-- ---------------------------------------------skills page-------------------------------------- -->
+
+        <section class="section" id="section-skills">
+            <h1>My Skills</h1>
+            <div class="container">
+                <div  class="card">
+                    <img clas="" src="assets/images/html.jpg" alt="">
+                    <p>HTML</p>
+                </div>
+                <div class="card"> 
+                    <img class="" src="assets/images/python.png" alt="">
+                    <p>PYTHON</p>
+                </div>
+                <div class="card">
+                    <img class="" src="assets/images/download.png" alt="">
+                    <p>SQL</p>
+                </div>
+                <div class="card">
+                    <img class="" src="assets/images/spp.png" alt="">
+                    <p>C++</p>
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------cv page-------------------------------------- -->
+
+        <section class="section" id="section-cv">
+        <!-- education  -->
+        <div class="education">
+            <h2>Education</h2>
+            <div class="certificat">
+                <h3>Diploma in Software Engineering Fundamentals</h3>
+                <p>ITI | 2023 - 2024</p>
+            </div>
+            <div class="certificat">
+                <h3>Bachelor of Commerce</h3>
+                <p>Al-Azhar University | 2015 - 2019</p>
+                <p>Accounting Department.</p>
+            </div>
+        </div>
+        <!-- Experience  -->
+        <div class="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Full Stack Developer</h3>
+                <p> Tech Solutions | Jan 2023 - Present</p>
+
+            </div>
+            <div class="job">
+                <h3>Web Developer Intern</h3>
+                <p> Web Studio | Jun 2022 - Dec 2022</p>
+
+            </div>
+        </div>
+        </section>
+        <!-- ---------------------------------------------Birth Day-------------------------------------- -->
+        <section class="section" id="section-birth_day">
+        <div class="container_birthday">
+        <div class="birthday">
+            <h1>My Birth Day</h1>
+            <p>13 - August - 1997</p>
+            <img  class="birthday-image" src="assets/images/birthday-wishes-and-qoutes-oyegifts.jpg" alt="birthday-image">
+
+        </div>
+        <div class="kind_msg" id="kind_msg">
+            <h2>Make me a wish</h2>
+            <textarea name="" id=""  placeholder="Your kind message here..."></textarea>
+            <button><label for="thanks">sent</label></button>
+        </div>
+        <div class="thanks">
+            <h1>Thank You!</h1>
+            <p>Your message means a lot to me.</p>
+        </div>
+    </div>
+
+        </section>
+        <!-- ---------------------------------------------thanks page-------------------------------------- -->
+
+        <section class="section" id="section-thanks">
+            <img class="thanks_imag" src="assets/images/thanks.webp" alt="tanks">
+            <h1>Thank You</h1>
+            <p>I appreciate your message</p>
+        </section>
+        <!-- ---------------------------------------------contact me page-------------------------------------- -->
+        <section class="section" id="section-contact_me">
+            <h2>Contact Me</h2>
+            <div class="form-container">
+                <form method="get" action="">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message....." rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="social-media">
+                    <p>Follow Me:</p>
+                    <a href=" mailto:samiramustafa138@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/samira-mostafa/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/0201032880118"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+                <!-- ---------------------------------------------my wishes page-------------------------------------- -->
+
+        <section class="section" id="section-my_wishes">
+            <div class="slider-container">
+            <h1>I would like to visit</h1>
+            <div class="slider">
+                
+                <div class="slide">
+                    <img src="assets/images/italy.jpg" alt="Italy">
+                    <div class="country-name">Italy</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/makkah2.webp" alt="Makkah">
+                    <div class="country-name">Makkah</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/china.jpg" alt="China">
+                    <div class="country-name">China</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/eiffel26.jpg" alt="France">
+                    <div class="country-name">France</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/Burj-Khalifa-1.jpg" alt="The UAE">
+                    <div class="country-name">The UAE</div>
+                </div>
+            </div>
+        </div>
+        </section>
+</body>
+</html>
